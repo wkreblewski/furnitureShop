@@ -13,8 +13,8 @@ var prefix = require('gulp-autoprefixer');
 gulp.task('serve', ['rwd'], function() {
 
     browserSync.init({
-        server: "./"
-        // port: 3010
+        server: "./",
+        port: 3008
     });
 
     gulp.watch("./scss/**/*.scss", ['rwd']);

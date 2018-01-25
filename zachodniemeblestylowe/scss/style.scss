@@ -1,8 +1,5 @@
-*{
-  margin:0;
-  padding: 0px;
-  box-sizing: border-box;
-}
+@import "reset";
+@import "grid";
 
 header{
   display:flex;
@@ -10,12 +7,12 @@ header{
 
 
   section {
-    border: 2px green solid;
+    //border: 2px green solid;
     text-align: center;
-    font-size: 7vw;
+    font-size: 50px;
     text-shadow: black 0px 0px 1rem;
     color: red;
-    padding-top: 2vh;
+    padding-top: 1rem;
     //background: #bdbdbd;
     //height:200px;
     //margin: 5px;
@@ -32,36 +29,48 @@ header{
 
 
 body {
-  .backgroundimg {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    //color: #000000;
+  .backgroundimg{
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    z-index:-1;
-    
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
   }
+    //background-image: url("../images/background.jpg");
+    //background-repeat: no-repeat;
+    ////background-position: cover;
+    //background-size: 100%;
+    //object-fit: fill;
+    //color: #000000;
+    //width: 100%;
+    //height: 100%;
+    //top: 0px;
+    //position: absolute;
+    //z-index:-1;
+    //border: black solid 2px;
+    
+
   .list {
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
-    list-style-type: none;
-    padding-left: 3vw;
-    padding-right: 2vw;
+    background-color: white;
+    opacity: .5;
 
     li {
-      margin:1vw 4vw 1vw 4vw ;
+      //margin:1vw 4vw 1vw 4vw ;
+      list-style-type: none;
 
       a {
-        border: 2px red solid;
+        //border: 2px red solid;
+        text-shadow: black 0px 0px 1rem;
         text-decoration: none;
-        font-size: 3vw;
+        font-size: 25px;
         color: black;
+        padding: 5px;
+        font-weight: 550;
       }
     }
   }
@@ -75,107 +84,153 @@ body {
       //background-color: lightskyblue;
 
       div {
-        margin: 10vw 0vw 3vw 0vw;
-        font-size: 3vw;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+        font-size: 20px;
         //font-weight: bold;
         text-align: center;
-        width: 60%;
-        height: 200px;
+        width: 80%;
+        max-height: 300px;
         display: flex;
         color: black;
+        overflow: auto;
+          .description1 {
+            //margin-top: 1.5rem;
+            //margin-bottom: 0.75 rem;
+        }
+          .description2 {
+            margin-top: 1rem;
+
+          }
 
       }
     }
 }
 
-@mixin desktop {
-  @media (min-width: 420px){
-    @content;
+.a {
+  background-color: white;
+  opacity: .5;
+}
+//.kreska {
+//  border-right: black solid 1px;
+//  border-left: black solid 1px;
+//}
+
+@media (min-width: 720px){
+
+  header{
+    display:flex;
+    text-decoration: none;
+
+
+    section {
+      //border: 2px green solid;
+      text-align: center;
+      font-size: 75px;
+      text-shadow: black 0px 0px 1rem;
+      color: red;
+      padding-top: 3rem;
+      //background: #bdbdbd;
+      //height:200px;
+      //margin: 5px;
+
+      &.small {
+        flex-grow: 1;
+      }
+
+      &.big {
+        flex-grow: 12;
+      }
+    }
   }
-}
 
 
-.crazy-layout{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  body {
+    .backgroundimg{
+      height: 100vh;
+      width: 100%;
+      background-image: url("../images/background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    //background-image: url("../images/background.jpg");
+    //background-repeat: no-repeat;
+    ////background-position: cover;
+    //background-size: 100%;
+    //object-fit: fill;
+    //color: #000000;
+    //width: 100%;
+    //height: 100%;
+    //top: 0px;
+    //position: absolute;
+    //z-index:-1;
+    //border: black solid 2px;
 
-  div{
-    background: cornflowerblue;
-    height: 50px;
-    width: 100%;
-    margin: 5px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    &:nth-of-type(2){
-      @include desktop{
-        width: 48%;
+    .list {
+      padding-top: 10px;
+      display: flex;
+      justify-content:center;
+      flex-wrap: wrap;
+      background-color: white;
+      opacity: .5;
+
+      li {
+        margin:0vw 2vw 1vw 0vw ;
+        list-style-type: none;
+
+        a {
+          //border: 2px red solid;
+          text-shadow: black 0px 0px 1rem;
+          text-decoration: none;
+          font-size: 33px;
+          color: #000000;
+          padding: 5px;
+          font-weight: bold;
+        }
       }
     }
-
-    &:nth-of-type(3){
-      @include desktop{
-        width: 48%;
-      }
-    }
-
-    &:nth-of-type(4){
-      width: 48%;
-      order: 2;
-      @include desktop{
-        width: 24%;
-      }
-    }
-
-    &:nth-of-type(5){
-      width: 48%;
-      order: 1;
-      @include desktop{
-        width: 24%;
-      }
-    }
-
-    &:nth-of-type(6){
-      width: 48%;
-      order: 4;
-      @include desktop{
-        width: 24%;
-      }
-    }
-
-    &:nth-of-type(7){
-      width: 48%;
-      order: 3;
-      @include desktop{
-        width: 24%;
-      }
-    }
-
-    &:nth-of-type(8){
-      order: 4;
-      @include desktop{
-        width: 68%;
-      }
-    }
-    &:nth-of-type(9){
-      order: 6;
-      @include desktop{
-        width: 30%;
-      }
-    }
-    &:nth-of-type(10){
-      order: 5;
-    }
-
-    @include desktop {
-      &:nth-of-type(n) {
-        order: 0;
-      }
-    }
-
-
   }
-}
+  .circles{
+    article {
 
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      //background-color: lightskyblue;
+
+      div {
+        justify-content: center;
+        padding: 10px 0 10px 0;
+        font-size: 28px;
+        //font-weight: bold;
+        text-align: center;
+        width: 80%;
+        max-height: 300px;
+        display: flex;
+        color: black;
+        overflow: auto;
+        .description1 {
+          //margin-top: 1.5rem;
+          //margin-bottom: 0.75 rem;
+        }
+        .description2 {
+          margin-top: 1rem;
+
+        }
+
+      }
+    }
+  }
+
+  .a {
+    //background-color: white;
+    //opacity: .5;
+  }
+  //.kreska {
+  //  border-right: black solid 1px;
+  //  border-left: black solid 1px;
+  //}
+    }
