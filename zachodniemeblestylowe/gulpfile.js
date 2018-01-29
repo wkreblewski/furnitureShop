@@ -14,7 +14,7 @@ gulp.task('serve', ['rwd'], function() {
 
     browserSync.init({
         server: "./",
-        port: 3008
+        port: 3007
     });
 
     gulp.watch("./scss/**/*.scss", ['rwd']);
