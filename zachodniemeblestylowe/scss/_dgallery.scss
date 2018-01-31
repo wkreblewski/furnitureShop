@@ -16,7 +16,7 @@ body {
   }
 }
 
-.gallerycontent{
+.dgallerycontent{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -25,14 +25,15 @@ body {
   padding-top: 20px;
 }
 
-.photo {
+.dphoto {
   margin: 15px 0;
   width: 220px;
-  background:  rgba(255, 255, 255, 0.44);;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.44);
   padding: 5px;
-  opacity: 0.85;
+  opacity: 0.9;
   border-radius: 5px;
-  border: 1px solid  rgba(255, 255, 255, 0.44);;
+  border: 1px solid  rgba(255, 255, 255, 0.44);
   box-sizing: border-box;
 
   display: flex;
@@ -45,13 +46,13 @@ body {
   align-items: flex-start;
 }
 
-.photo img {
+.dphoto img {
   flex-basis: 100%;
   width: 210px;
   max-height: 270px;
 }
 
-.photo figcaption {
+.dphoto figcaption {
   margin-top: 5px;
   text-align: center;
 }
@@ -60,7 +61,7 @@ body {
 //  transform: rotate(-2deg) scale(0.8);
 //}
 
-.photo:hover {
+.dphoto:hover {
   opacity: 1;
   transform: scale(1.05);
 }
@@ -78,3 +79,47 @@ body {
 //      background-attachment: fixed;
 //    }
 //  }
+
+.fullScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background:rgba(255,255,255,0.7);
+}
+.fullScreen .close {
+  position:relative;
+  display: block;
+  margin: auto;
+  color: red;
+  height: 50px;
+  width: 100px;
+  opacity: .7;
+}
+.fullScreen .nextPicture {
+  position:relative;
+  display: block;
+  margin: auto;
+  color: red;
+  height: 50px;
+  width: 100px;
+  opacity: .7;
+}
+.fullScreen .prevPicture {
+  position:relative;
+  display: block;
+  margin: auto;
+  color: red;
+  height: 50px;
+  width: 100px;
+  opacity: .7;
+}
+
+.fullScreen img {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  height: auto;
+}
