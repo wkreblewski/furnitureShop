@@ -17,26 +17,34 @@ body {
     background-position: local;
     background-attachment: fixed;
   }
+  .kreska{
+    margin-left: 1px;
+    margin-right: 1px;
 
+  }
   .list {
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
-    background-color: white;
-    opacity: .5;
+    //background-color: white;
+    //opacity: .5;
 
     li {
       //margin:1vw 4vw 1vw 4vw ;
       list-style-type: none;
+      margin-top: 5px;
 
       a {
-        //border: 2px red solid;
+        border: 2px red solid;
         text-shadow: black 0px 0px 1rem;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 22px;
         color: black;
         padding: 5px;
         font-weight: 550;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.35);
       }
     }
   }
@@ -48,7 +56,7 @@ body {
     section {
       //border: 2px green solid;
       text-align: center;
-      font-size: 50px;
+      font-size: 40px;
       text-shadow: black 0px 0px 1rem;
       color: red;
       padding-top: 0.5rem;
@@ -99,8 +107,9 @@ body {
 }
 
 .a {
-  background-color: white;
-  opacity: .5;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255,0.35);
+  opacity: .9;
 }
 
 
@@ -109,6 +118,7 @@ body {
   body {
     .backgroundimg{
       height: 100vh;
+      min-height: 1000px;
       width: 100%;
       background-image: url("../images/ophotos/9.JPG");
       background-size: cover;
@@ -148,21 +158,31 @@ body {
       display: flex;
       justify-content:center;
       flex-wrap: wrap;
-      background-color: white;
-      opacity: .5;
+      //background-color: white;
+      //opacity: .5;
 
       li {
         margin:0vw 2vw 1vw 0vw ;
-        list-style-type: none;
+        list-style-type: none;  .dphoto:hover {
+        transform: scale(1.05);
+      }
 
         a {
-          //border: 2px red solid;
+          border: 2px red solid;
           text-shadow: black 0px 0px 1rem;
           text-decoration: none;
-          font-size: 33px;
-          color: #000000;
+          font-size: 30px;
+          color: black;
           padding: 5px;
-          font-weight: bold;
+          font-weight: 550;
+          border-radius: 5px;
+          background: rgba(255, 255, 255, 0.35);
+          border: 1px solid rgba(255, 255, 255, 0.35);
+        }
+        &:hover {
+          opacity: 1;
+          transition: 0.3s all ease-in-out;
+          transform: scale(1.02);
         }
       }
     }
