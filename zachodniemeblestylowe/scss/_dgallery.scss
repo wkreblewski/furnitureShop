@@ -68,8 +68,24 @@ body {
       background: rgba(255, 255, 255, 0.7);
       padding-top: 50px;
     }
+    .fullScreenegallery {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.7);
+      padding-top: 50px;
+    }
 
     .fullScreen img {
+      display: block;
+      margin: 0 auto;
+      width: 300px;
+      height: auto;
+    }
+    .fullScreenegallery img {
       display: block;
       margin: 0 auto;
       width: 300px;
@@ -175,11 +191,26 @@ body {
     background: rgba(255, 255, 255, 0.7);
     padding-top: 50px;
   }
-
+  .fullScreenegallery {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 50px;
+  }
   .fullScreen img {
     display: block;
     margin: 0 auto;
     width: 500px;
+    height: auto;
+  }
+  .fullScreenegallery img {
+    display: block;
+    margin: 0 auto;
+    width: 900px;
     height: auto;
   }
   //.fullScreen .close {
