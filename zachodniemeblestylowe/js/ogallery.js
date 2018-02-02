@@ -20,8 +20,7 @@ document.addEventListener('DOMContentLoaded', function(){
             var	newDiv	=	document.createElement("div");
             // newDiv.innerHTML='<button class="prevPicture">Poprzednie</button>'+'<button class="close">Zamkni</button>'+'<button class="nextPicture">Następnye</button>'+'<img src="./'+src+'">';
             newDiv.innerHTML='<img src="./'+src+'">';
-
-            newDiv.classList.add("fullScreenEgallery");
+            newDiv.classList.add("fullScreen");
             body.appendChild(newDiv);
 
             // var next = document.querySelector(".nextPicture")
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log(button);
 
             newDiv.addEventListener('click', function(){
-                var toDelete = document.querySelector(".fullScreenEgallery");
+                var toDelete = document.querySelector(".fullScreen");
                 console.log(toDelete);
                 toDelete.parentElement.removeChild(toDelete);
             })

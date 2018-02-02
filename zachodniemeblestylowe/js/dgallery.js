@@ -20,7 +20,12 @@ document.addEventListener('DOMContentLoaded', function(){
             var	newDiv	=	document.createElement("div");
             // newDiv.innerHTML='<button class="prevPicture">Poprzednie</button>'+'<button class="close">Zamkni</button>'+'<button class="nextPicture">Następnye</button>'+'<img src="./'+src+'">';
             newDiv.innerHTML='<img src="./'+src+'">';
-            newDiv.classList.add("fullScreen");
+            if (all[i]<4){
+                newDiv.classList.add("fullScreen");
+            } else {
+                newDiv.classList.add("fullScreenEgallery");
+            }
+            console.log(src[2]);
             body.appendChild(newDiv);
 
             // var next = document.querySelector(".nextPicture")
