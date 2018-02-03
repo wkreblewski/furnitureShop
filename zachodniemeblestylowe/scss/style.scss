@@ -75,6 +75,7 @@ body {
   }
 }
 .circles{
+  min-height: 568px;
     article {
 
       display: flex;
@@ -98,7 +99,7 @@ body {
             //margin-bottom: 0.75 rem;
         }
           .description2 {
-            margin-top: 1rem;
+            //margin-top: 1rem;
 
           }
 
@@ -110,7 +111,7 @@ body {
   margin-top: 10px;
   background-color: rgba(255, 255, 255,0.35);
   opacity: .9;
-  min-height: 700px;
+  //min-height: 460px;
 
 }
 
@@ -209,7 +210,7 @@ body {
         color: black;
         overflow: auto;
         .description1 {
-          //margin-top: 1.5rem;
+          margin-top: 1.5rem;
           //margin-bottom: 0.75 rem;
         }
         .description2 {
